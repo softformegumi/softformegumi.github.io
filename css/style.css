@@ -1,706 +1,168 @@
-header {
-  background-position: center center;
-  background-attachment: fixed;
-  background-size: cover;
-  cursor: context-menu;
+/*===== LAYOUT =====*/
+.bd-grid{
+  max-width: 1024px;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-column-gap: 2rem;
+  width: calc(100% - 2rem);
+  margin-left: var(--mb-2);
+  margin-right: var(--mb-2);
 }
-
-@media only screen
-  /* and (min-device-width: 375px) */
-  and (max-width: 750px) {
-    header {
-      background-size: cover;
-      background-position: center center;
-      background-repeat: no-repeat;
-      background-attachment: scroll;
-    }
-
-}
-
-.mainheader {
-  width: 50%;
-  margin: 0 auto 110px;
-  padding: 8px 0 2px 0;
-  display: inline-block;
-  color: #333;
-  border: 2px solid #333;
-  text-align: center;
-  outline: none;
-  text-decoration: none;
-}
-
-.landing {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 480px;
-}
-
-@media only screen
-  /* and (min-device-width: 375px) */
-  and (max-width: 750px) {
-    .mainheader {
-      width: 100%;
-      font-weight: bold;
-      color: black;
-      line-height: 1.3em;
-      margin: 0 0 100px 0;
-    }
-
-    .mainheader span {
-      color: black;
-      font-size: 17px;
-      letter-spacing: 1px;
-      line-height: 2em;
-    }
-
-    .landing {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      margin: auto;
-      height: 480px;
-    }
-
-}
-h1 {
-  font-family: Lato;
-  font-weight: 600;
-  text-align: center;
-  font-style: normal;
-  font-size: 64px;
-  line-height: 1.3em;
-  letter-spacing: -.03em;
-  text-transform: none;
-  color: #111;
-}
-
-.mainheader h2 {
-  font-size: 20px;
-  font-family: Cabin;
-  letter-spacing: 2px;
-  line-height: 1.3em;
-  color: black;
-  align-items: center;
-}
-
-#navbar-real {
-  background-color: inherit !important;
-  justify-content: center;
-}
-
-#navbarSupportedContent, a.nav-link {
-  font-family: Quicksand;
-  font-size: 14px;
-  font-weight: bold;
-}
-
-a.nav-link:hover {
-  color: black !important;
-}
-
-.navbar-nav > li {
-  font-family: Martel;
-  display: flex;
-  padding: 0 10px;
-}
-
-#custom-navbar {
-  flex-direction: row;
-  justify-content: space-evenly;
-}
-
-.navbar-toggler.collapsed .navbar-toggler-icon {
-  -webkit-transform: rotate(0deg); transform: rotate(0deg);
-  -webkit-transition: 0.2s ease; transition: 0.2s ease;
-}
-.navbar-toggler .navbar-toggler-icon {
-  -webkit-transform: rotate(90deg); transform: rotate(90deg);
-  outline:none !important;
-}
-
-#nav-gen:focus {
-  color: black !important;
-  border-color: transparent;
-  outline: none;
-}
-
-#nav-gen {
-  stroke: #333;
-  border-color: transparent;
-}
-
-.navbar-brand {
-  font-family: "Open Sans";
-  font-weight: bold;
-  color: #222 !important;
-  font-size: 20px;
-  letter-spacing: 0.1em;
-  line-height: 1.2em;
-  padding: 0 2%;
-}
-
-.intro {
-  background-color: white;
-  padding: 60px 0 0 0;
-  cursor: context-menu;
-}
-
-.bgrnd-row:after {
-  content: ""; /* This is necessary for the pseudo element to work. */
-  display: block; /* This will put the pseudo element on its own line. */
-  margin: -12px auto; /* This will center the border. */
-  width: 80%; /* Change this to whatever width you want. */
-  padding-top: 20px; /* This creates some space between the element and the border. */
-  border-bottom: 1px solid #808080; /* This creates the border. Replace black with whatever color you want. */
-}
-
-.designer-cube, .leader-cube {
-  border-left: 1px solid #808080;
-}
-
-@media only screen
-  /* and (min-device-width: 375px) */
-  and (max-width: 990px) {
-    .Designer:before, .Leader:before {
-      content: "";
-      display: block;
-      margin: 0 auto;
-      width: 90%;
-      padding-top: 20px;
-      border-bottom: 1px solid #808080;
-    }
-    .designer-cube, .leader-cube {
-      border-left: 0;
-    }
-}
-
-.intro h2 {
-  font-size: 30px;
-}
-
-.intro img {
-  height: 200px;
-  width: 200px;
-  margin-bottom: 30px;
-}
-
-.background-title {
-  margin: 10px;
-}
-
-.background-content {
-  padding: 20px 0;
-  font-family: Quicksand;
-  background-color: rgb(250,250,250);
-  border-radius: 10px;
-  width: 85%;
-  margin: auto;
-}
-
-.header-background {
-  display: flex;
-  flex-direction: row;
-  margin: auto;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-}
-
-.header-background h2 {
-  font-family: "Lato";
-  font-weight: bolder;
-  margin-top: 5px;
-  color: #333;
-}
-
-.fa-background {
-  border-radius: 100%;
-  cursor: default;
-  display: inline-block;
-  height: 2.5em;
-  line-height: 2.5em;
-  margin-right: 15px;
-  width: 2.5em;
-
-  font-size: 20px;
-  background-color: #4e3419;
-  color: white;
-}
-
-.resume {
-  font-family: "Open Sans";
-  color: black;
-  padding: 8px 40px;
-  font-size: 18px;
-  font-weight: bold;
-  border-color: lightgrey;
-  margin-top: 40px;
-}
-
-.resume:hover, .resume:focus {
-  border-color: #4e3419;
-  background-color: #4e3419;
-  color: white;
-  transition: background-color border-color 0.2s ease-in, color 0.2s ease-in;
-}
-
-.section.proj {
-  padding: 80px 0 0 0;
-  font-family: Quicksand;
-  cursor: context-menu;
-}
-
-.skill-1 {
-  display: flex;
-  justify-content: center;
-  margin-left: -100px;
-}
-
-.skill-2 {
-  display: flex;
-  justify-content: center;
-}
-
-#skills {
-  display: flex;
-  justify-content: center;
-  /* width: 100%; */
-}
-
-@media only screen
-  and (min-width: 750px)
-  and (max-width: 990px) {
-    #skills {
-        flex-direction: column;
-    }
-
-    .skill-1, .skill-2 {
-      margin: 0 auto;
-    }
-}
-
-@media only screen and (max-width: 750px) {
-    #skills {
-        flex-direction: column;
-    }
-
-    .skill-1, .skill-2 {
-      margin: 0 10px;
-    }
-
-    .long-skill {
-      font-size: 15px;
-    }
-
-}
-
-.words{
-  margin: 10px 5px 10px 10px;
-  font-family: Cabin;
-}
-
-.words > div {
-  height: 25px;
-  text-align: end;
-  margin: 0 0 10px 0;
-}
-
-.bar {
-  flex-direction: column;
-  width: 70%;
-}
-
-/* whole bar */
-.progress {
-  height: 25px;
-  width: 400px;
-  margin: 10px;
-}
-
-@media only screen and (max-width: 750px) {
-    .progress {
-        width: 100%;
-    }
-}
-
-/* bar contents */
-.progress-bar {
-  background-color: #3f2a14 !important;
-  font-family: Oswald;
-  font-size: 15px;
-  transition: background-color 0.2s ease-out,
-  color 0.2s ease-out;
-}
-
-.progress-bar:hover, .progress-bar:focus {
-  background-color: #fff;
-  color:#67d967;
-  /* font-weight: bold; */
-  transition: background-color 0.3s ease-in,
-  color 0.3s ease-in;
-  cursor: context-menu;
-}
-
-.expertise {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin-top: 20px;
-}
-
-.expertise:hover {
-  cursor: context-menu;
-}
-
-.exp-content {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
-
-@media only screen
-  /* and (min-device-width: 375px) */
-  and (max-width: 750px) {
-    .exp-content {
-        flex-direction: column;
-        width: 60%;
-        margin: auto;
-    }
-    .progress {
-      width: 80%;
-    }
-}
-
-.expertise p {
-  border: 1px solid;
-  border-radius: 2px;
-  margin: 5px;
-  padding: 5px 15px;
-  background-color: #e9ecef;
-  border-color: #e9ecef;
-  color: #333;
-  font-weight: bold;
-}
-
-.prev-proj {
-  padding: 40px 0;
-}
-
-.prev-proj img {
+.l-header{
   width: 100%;
-  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: var(--z-fixed);
+  background-color: #fff;
+  box-shadow: 0 1px 4px rgba(146,161,176,.15);
 }
-
-.prev-proj-box {
+/*===== NAV =====*/
+.nav{
+  height: var(--header-height);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: var(--font-semi);
+}
+@media screen and (max-width: 768px){
+  .nav__menu{
+    position: fixed;
+    top: var(--header-height);
+    right: -100%;
+    width: 80%;
+    height: 100%;
+    padding: 2rem;
+    background-color: var(--second-color);
+    transition: .5s;
+  }
+}
+.nav__item{
+  margin-bottom: var(--mb-4);
+}
+.nav__link{
+  position: relative;
+  color: #fff;
+}
+.nav__link:hover{
   position: relative;
 }
-
-.filter-overlay {
+.nav__link:hover::after{
   position: absolute;
+  content: "";
   width: 100%;
-  height: 100%;
-  left:0;
-  top:0;
-  background-color: rgba(255, 255, 255, 0);
-  transition: 200ms;
-  opacity: 0;
-
-  display:flex;
-  text-align: center;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  font-family: Cabin;
-  font-weight: bold;
+  height: 0.18rem;
+  left: 0;
+  top: 2rem;
+  background-color: var(--first-color);
+}
+.nav__logo{
+  color: var(--second-color);
+}
+.nav__toggle{
+  color: var(--second-color);
+  font-size: 1.5rem;
+  cursor: pointer;
 }
 
-.filter-overlay:hover, .filter-overlay:focus {
-  background-color: rgba(255, 255, 255, 0.75);
-  opacity: 1;
-
-  display:flex;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-  font-family: Cabin;
-  font-size: 30px;
-  letter-spacing: 2px;
+/*Active menu*/
+.active::after{
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 0.18rem;
+  left: 0;
+  top: 2rem;
+  background-color: var(--first-color);
 }
 
-.filter-overlay h4 {
-    font-family: Cabin;
-    font-weight: bold;
-    font-size: 30px;
-    margin-top: 10px;
+/*=== Show menu ===*/
+.show{
+  right: 0;
 }
 
-.filter-overlay h4:after {
-  content: ""; /* This is necessary for the pseudo element to work. */
-  display: block; /* This will put the pseudo element on its own line. */
-  margin: 0 auto; /* This will center the border. */
-  width: 60%; /* Change this to whatever width you want. */
-  padding: 5px; /* This creates some space between the element and the border. */
-  border-bottom: 2px solid #808080; /* This creates the border. Replace black with whatever color you want. */
+/*===== HOME =====*/
+.home{
+  height: calc(100vh - 3rem);
+  row-gap: 1rem;
 }
-
-.filter-overlay p {
-  font-size: 15px;
-  padding: 0 40px;
-  font-family: Quicksand;
+.home__data{
+  align-self: center;
 }
-
-.nopadding {
-  padding: 0 !important;
-  margin: 0 !important;
+.home__title{
+  font-size: var(--big-font-size);
+  margin-bottom: var(--mb-5);
 }
-
-@media only screen
-  /* and (min-device-width: 375px) */
-  and (max-width: 1200px){
-    .filter-overlay  {
-      height: 100%;
-    }
-    .prev-proj img {
-      height: 350px;
-    }
+.home__title-color{
+  color: var(--first-color);
 }
-
-.prev-leadership {
+.home__social{
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  font-family: Cabin;
+}
+.home__social-icon{
+  width: max-content;
+  margin-bottom: var(--mb-2);
+  font-size: 1.5rem;
+  color: var(--second-color);
+}
+.home__social-icon:hover{
+  color: var(--first-color);
+}
+.home__img{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 295px;
 }
 
-.logo-leadership input {
-  margin: 10px 20px;
+/*BUTTONS*/
+.button{
+  display: inline-block;
+  background-color: var(--first-color);
+  color: #fff;
+  padding: .75rem 2.5rem;
+  font-weight: var(--font-semi);
+  border-radius: .5rem;
+}
+.button:hover{
+  box-shadow: 0 10px 36px rgba(0,0,0,.15);
 }
 
-.logo-leadership input:focus {
-  outline: none;
+/* ===== WORK =====*/
+.work__container{
+  row-gap: 2rem;
+}
+.work__img{
+  box-shadow: 0 4px 25px rgba(14,36,49,.15);
+  border-radius: .5rem;
+  overflow: hidden;
+}
+.work__img img{
+  transition: 1s;
+  cursor: pointer;
+}
+.work__img img:hover{
+  transform: scale(1.1);
 }
 
-.logo-leadership {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
-
-.asub.leader {
-  border-radius: 150%;
-  width: 85px;
-  height: 85px;
-}
-
-.sase.leader {
-  width: 100px;
-  height: 90px;
-}
-
-.salesforce.leader {
-  border-radius: 150%;
-  height: 90px;
-}
-
-.cswn.leader {
-  width: 95px;
-  height: 90px;
-}
-
-.purdue.leader {
-  width: 110px;
-  height: 80px;
-}
-
-@media only screen and (max-width: 750px) {
-  .first-logo-row, .sec-logo-row {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .asub.leader {
-    margin-bottom: 20px;
-  }
-
-  .cswn.leader {
-    margin-bottom: 30px;
-  }
-
-  .purdue.leader {
-    margin-top: -10px;
-  }
-}
-
-@media only screen
-  /* and (min-device-width: 375px) */
-  and (max-device-width: 750px)
-  and (-webkit-min-device-pixel-ratio: 2) {
-    .logo-leadership {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
-    .first-logo-row, .sec-logo-row {
-      display: flex;
-      flex-direction: row;
-      margin: 10px 0;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .logo-leadership input {
-      margin: 0 10px;
-    }
-
-    .sase.leader {
-      margin-bottom: 30px;
-    }
-
-    .purdue.leader {
-      margin-top: -20px;
-    }
-}
-
-.content-leadership {
-  margin-top: 20px;
-  border-radius: 5px;
-}
-
-@media only screen
-  /* and (min-device-width: 375px) */
-  and (max-device-width: 750px)
-  and (-webkit-min-device-pixel-ratio: 2) {
-    .content-leadership, #asub-content, #sase-content, #cswn-content, #purdue-content  {
-      width: 100%;
-    }
-}
-
-.content-leadership h5 {
-  font-family: Cabin;
-  font-weight: bold;
-  color: #202020;
-  font-size: 20px;
-}
-
-.content-leadership p {
-  margin: 2px 0;
-}
-
-.prev-awards:before {
-  content: ""; /* This is necessary for the pseudo element to work. */
-    display: block; /* This will put the pseudo element on its own line. */
-    margin: 0 auto; /* This will center the border. */
-    width: 50%; /* Change this to whatever width you want. */
-    padding-top: 0.1em; /* This creates some space between the element and the border. */
-    border-bottom: 1px solid black; /* This creates the border. Replace black with whatever color you want. */
-}
-
-.prev-awards {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 20px;
-}
-
-.prev-awards h6 {
-  font-family: "Lato";
-  font-weight: 900;
-  font-size: 20px;
-  color: black;
-  margin-top: 30px;
-  letter-spacing: 2px;
+/* ===== FOOTER =====*/
+.footer{
+  background-color: var(--second-color);
+  color: #fff;
   text-align: center;
+  font-weight: var(--font-semi);
+  padding: 2rem 0;
 }
-
-.prev-awards p {
-  font-size: 15px;
-  font-weight: 200;
-  color: #202020;
-  font-family: Cabin;
+.footer__title{
+  font-size: 2rem;
+  margin-bottom: var(--mb-4);
 }
-
-.contact:before {
-  content: ""; /* This is necessary for the pseudo element to work. */
-    display: block; /* This will put the pseudo element on its own line. */
-    margin: 0 auto 2em auto; /* This will center the border. */
-    width: 50%; /* Change this to whatever width you want. */
-    padding-top: 0.1em; /* This creates some space between the element and the border. */
-    border-bottom: 1px solid black; /* This creates the border. Replace black with whatever color you want. */
+.footer__social{
+  margin-bottom: var(--mb-4);
 }
-
-.contact {
-  /* background-color: #3f2a14; */
-  padding: 10px 0 2em 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.contact h2 {
-  font-family: "Quicksand";
-  font-weight: 100;
-  font-size: 20px;
-  /* padding: 0 0 10px 0; */
-}
-
-.contactlabel {
-  cursor:default;
-  color:#000;
-  text-decoration:none;
-  text-align: center;
-}
-
-/* social media */
-.icons {
-  padding: 0.1em;
-  font-size: 25px;
-  text-align: center;
-  margin: 5px;
-}
-
-.icons:hover, .icons:focus {
-  color: #3f2a14;
-  text-decoration: none;
-}
-
-.fa-facebook {
-  /* background: #3B5998; */
-  color: black;
-}
-
-.fa-twitter {
-  /* background: #3B5998; */
-  color: black;
-}
-
-.fa-linkedin {
-  /* background: #007bb5; */
-  color: black;
-}
-
-.fa-github {
-  /* background: black; */
-  color: black;
-}
-
-.fa-instagram {
-  /* background: #125688; */
-  color: black;
-}
-
-.fa-envelope {
-  /* background: #125688; */
-  color: black;
-}
-
-.fa-link {
-  /* background: black; */
-  color: black;
+.footer__icon{
+  font-size: 1.5rem;
+  color: #fff;
+  margin: 0 var(--mb-2)
 }
