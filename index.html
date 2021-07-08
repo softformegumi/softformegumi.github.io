@@ -1,45 +1,73 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>softformegumi</title>
 
 	<!-- main css -->
 	<link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-	<div class="container">
+	<div class="topbar" id="topbar">
+		<div class="logo">Proof Of Purchase</div>
+		<div class="tabs">
+			<div class="tab all" onclick="filterSelection('all')">All</div>
+			<div class="tab lezhin" onclick="filterSelection('lezhin')">Lezhin</div>
+			<div class="tab tapas" onclick="filterSelection('tapas')">Tapas</div>
+			<div class="tab tappytoon" onclick="filterSelection('tappytoon')">Tappytoon</div>
+		</div>
 
-		<h2>Proof of Purchases</h2>
-
-		<div class="menu">
-			<a href="#" class="btn" data-fliter="all">All</a>
-			<a href="#" class="btn" data-fliter="lezhin">Lezhin</a>
-			<a href="#" class="btn" data-fliter="tapas">Tapas</a>
-			<a href="#" class="btn" data-fliter="tappytoon">Tappytoon</a>
-			
+		<div class="container">
+			<div class="image lezhin">
+				<img src="img/red candy.jpeg" alt="sorry">
+			</div>
+			<div class="image tapas">
+				<img src="img/under the greenlight.jpeg" alt="sorry">
+			</div>
+			<div class="image tappytoon">
+				<img src="img/wistful summer.jpeg" alt="sorry">
+			</div>
 		</div>
 		
-		
-		<div class="box" id="store-items">
-
-			<div class="store-item lezhin">
-				<img src="img/under the greenlight.jpeg" alt="">
-			</div>
-
-			<div class="store-item tapas">
-				<img src="img/hold me tight.jpeg" alt="">
-			</div>
-
-			<div class="store-item tappytoon">
-				<img src="img/wistful summer.jpeg" alt="">
-			</div>
-		</div>
 	</div>
 
-	<!-- script js -->
-	<script src="main.js"></script>
+	<script>
+		
+		filterSelection("all");
+
+		function filterSelection(c){
+			var x,y,i,j;
+			x=document.getElementsByClassName("image");
+			y=document.getElementsByClassName("tab");
+
+			for (j = 0; j < y.length; j++) {
+				//here we check for active option
+				RemoveClass(y[j], "active");
+				if (y[j].className.indexof(c)>-1){
+					AddClass(y[j],"active");
+				}
+			}
+
+			if (c=="all") {
+				c=""
+			}
+
+
+			for(i=0;i<x.length;i++){
+				RemoveClass(x[i], "show");
+				if (x[j].className.indexof(c)>-1){
+					AddClass(x[i],"show");	
+				}
+			}
+
+			function AddClass(element,name){
+				element.classList.add(name);
+			}
+
+		}
+	</script>
 </body>
 </html>
