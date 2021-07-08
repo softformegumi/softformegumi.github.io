@@ -1,73 +1,58 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>softformegumi</title>
 
 	<!-- main css -->
 	<link rel="stylesheet" href="css/style.css">
 </head>
-
+	
 <body>
-	<div class="topbar" id="topbar">
-		<div class="logo">Proof Of Purchase</div>
-		<div class="tabs">
-			<div class="tab all" onclick="filterSelection('all')">All</div>
-			<div class="tab lezhin" onclick="filterSelection('lezhin')">Lezhin</div>
-			<div class="tab tapas" onclick="filterSelection('tapas')">Tapas</div>
-			<div class="tab tappytoon" onclick="filterSelection('tappytoon')">Tappytoon</div>
-		</div>
-
+	<section class="portfolio" id="Portfolio">
 		<div class="container">
-			<div class="image lezhin">
-				<img src="img/red-candy.jpeg" alt="Red Candy">
+			<div class="row">
+				<div class="section-title text-center">
+					<h1>Proof of Purchases</h1>
+				</div>
 			</div>
-			<div class="image tapas">
-				<img src="img/under-the-greenlight.jpeg" alt="Under The Green Light">
+			<div class="row">
+				<div class="filter-buttons">
+					<ul id="filter-btns">
+						<li class="active" data-target="all">ALL</li>
+						<li data-target="Lezhin">LEZHIN</li>
+						<li data-target="Tapas">TAPAS</li>
+						<li data-target="Tappytoon">TAPPYTOON</li>
+					</ul>
+				</div>
 			</div>
-			<div class="image tappytoon">
-				<img src="img/wistful-summer.jpeg" alt="Wistful Summer">
+			<div class="row">
+				<div class="portfolio-gallery">
+					<div class="item" data-id="Lezhin">
+						<div class="inner">
+							<img src="img/red-candy.jpeg" alt="portfolio">
+						</div>
+					</div>
+
+					<div class="item" data-id="Tapas">
+						<div class="inner">
+							<img src="img/red-candy.jpeg" alt="portfolio">
+						</div>
+					</div>
+
+					<div class="item" data-id="Tappytoon">
+						<div class="inner">
+							<img src="img/red-candy.jpeg" alt="portfolio">
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
-		
-	</div>
+	</section>
 
-	<script>
-		
-		filterSelection("all");
-
-		function filterSelection(c){
-			var x,y,i,j;
-			x=document.getElementsByClassName("image");
-			y=document.getElementsByClassName("tab");
-
-			for (j = 0; j < y.length; j++) {
-				//here we check for active option
-				RemoveClass(y[j], "active");
-				if (y[j].className.indexof(c)>-1){
-					AddClass(y[j],"active");
-				}
-			}
-
-			if (c=="all") {
-				c=""
-			}
-
-
-			for(i=0;i<x.length;i++){
-				RemoveClass(x[i], "show");
-				if (x[j].className.indexof(c)>-1){
-					AddClass(x[i],"show");	
-				}
-			}
-
-			function AddClass(element,name){
-				element.classList.add(name);
-			}
-
-		}
-	</script>
+	<script src="script.js"></script>
 </body>
 </html>
