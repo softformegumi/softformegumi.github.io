@@ -1,11 +1,11 @@
-body{
-	margin: 0;
-	font-family: 'poppins', sans-serif;
-}
-
 *{
 	box-sizing: border-box;
 	margin: 0;
+}
+
+body{
+	margin: 0;
+	font-family: 'poppins', sans-serif;
 }
 
 .container{
@@ -40,7 +40,7 @@ body{
 	position: absolute;
 	height: 2px;
 	right: 32%;
-	background-color: #fedd01;
+	background-color: #febd01;
 	bottom: 0px;
 }
 
@@ -62,9 +62,9 @@ body{
 }
 
 .portfolio .filter-buttons{
-	list-style: none;
-	text-align: center;
-	padding: 0;
+	flex: 0 0 100%;
+	max-width: 100%;
+	margin-bottom: 20px;
 }
 
 .portfolio .filter-buttons ul{
