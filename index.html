@@ -2,37 +2,46 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-
-	<!-- Link -->
-	<link rel="stylesheet" href="css/style.css">
-
-	<!-- unicons -->
-	<link rel="stylesheet" href="https://unicons.iconscout.com/release/v3.0.6/css/line.css">
- 
-
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>softformegumi</title>
+
+	<!-- main css -->
+	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-	<!-- navigation -->
-	<main class="main">
-		<header class="header">
-			<div class="wrap d-flex">
-				<h1 class="logo">
-					<a href="#">SOFTFORMEGUMI</a>
-				</h1>
-				<nav class="menu">
-					<ul>
-						<li><a href="">Home</a></li>
-						<li><a href="">Lezhin</a></li>
-						<li><a href="">Tapas</a></li>
-						<li><a href="">Tappytoon</a></li>
+	<div class="container">
 
-					</ul>
-				</nav>
+		<h2>Proof of Purchases</h2>
+
+		<div class="menu">
+			<a href="#" class="btn" data-fliter="all">All</a>
+			<a href="#" class="btn" data-fliter="lezhin">Lezhin</a>
+			<a href="#" class="btn" data-fliter="tapas">Tapas</a>
+			<a href="#" class="btn" data-fliter="tappytoon">Tappytoon</a>
+			<a href="#" class="btn" data-fliter="others">Others</a>
+			
+		</div>
+
+		<div class="box" id="store-items">
+
+			<div class="store-item lezhin">
+				<img src="img/underthegreenlight.jpeg" alt="">
 			</div>
-		</header>
-	</main>
 
+			<div class="store-item tapas">
+				<img src="img/underthegreenlight.jpeg" alt="">
+			</div>
+
+			<div class="store-item tappytoon">
+				<img src="img/underthegreenlight.jpeg" alt="">
+			</div>
+			
+		</div>
+		
+	</div>
+
+	<!-- script js -->
+	<script src="jss/main.js"></script>
 </body>
 </html>
